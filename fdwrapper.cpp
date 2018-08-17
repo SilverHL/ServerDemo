@@ -12,6 +12,8 @@ int setNonBlocking( int fd )
     return old_op;
 }
 
+//将fd加入到epoll监听的epitem中 
+//即开始监听fd
 void add_read_fd( int epollfd, int fd )
 {
     epoll_event event;
