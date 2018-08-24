@@ -1,0 +1,104 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BUFFER_EMPTY	fdwrapper.h	/^enum RET_CODE { OK = 0, NOTHING = 1, IOERR = -1, CLOSED = -2, BUFFER_FULL = -3, BUFFER_EMPTY = -4, TRY_AGAIN };$/;"	e	enum:RET_CODE
+BUFFER_FULL	fdwrapper.h	/^enum RET_CODE { OK = 0, NOTHING = 1, IOERR = -1, CLOSED = -2, BUFFER_FULL = -3, BUFFER_EMPTY = -4, TRY_AGAIN };$/;"	e	enum:RET_CODE
+BUF_SIZE	conn.h	/^    static const int BUF_SIZE = 2048;$/;"	m	class:conn
+CLOSED	fdwrapper.h	/^enum RET_CODE { OK = 0, NOTHING = 1, IOERR = -1, CLOSED = -2, BUFFER_FULL = -3, BUFFER_EMPTY = -4, TRY_AGAIN };$/;"	e	enum:RET_CODE
+EPOLL_WAIT_TIME	processpool.h	/^static int EPOLL_WAIT_TIME = 5000;$/;"	v
+ERROR	fdwrapper.h	/^enum OP_TYPE { READ = 0, WRITE, ERROR };$/;"	e	enum:OP_TYPE
+IOERR	fdwrapper.h	/^enum RET_CODE { OK = 0, NOTHING = 1, IOERR = -1, CLOSED = -2, BUFFER_FULL = -3, BUFFER_EMPTY = -4, TRY_AGAIN };$/;"	e	enum:RET_CODE
+LOG_BUFFER_SIZE	log.cpp	/^static int LOG_BUFFER_SIZE = 2048;$/;"	v	file:
+MAX_EVENT_NUMBER	processpool.h	/^    static const int MAX_EVENT_NUMBER = 10000;      \/\/epoll最多能处理的事件数目$/;"	m	class:processpool
+MAX_PROCESS_NUMBER	processpool.h	/^    static const int MAX_PROCESS_NUMBER = 16;       \/\/进程池允许最大进程数量$/;"	m	class:processpool
+NOTHING	fdwrapper.h	/^enum RET_CODE { OK = 0, NOTHING = 1, IOERR = -1, CLOSED = -2, BUFFER_FULL = -3, BUFFER_EMPTY = -4, TRY_AGAIN };$/;"	e	enum:RET_CODE
+OK	fdwrapper.h	/^enum RET_CODE { OK = 0, NOTHING = 1, IOERR = -1, CLOSED = -2, BUFFER_FULL = -3, BUFFER_EMPTY = -4, TRY_AGAIN };$/;"	e	enum:RET_CODE
+OP_TYPE	fdwrapper.h	/^enum OP_TYPE { READ = 0, WRITE, ERROR };$/;"	g
+READ	fdwrapper.h	/^enum OP_TYPE { READ = 0, WRITE, ERROR };$/;"	e	enum:OP_TYPE
+RET_CODE	fdwrapper.h	/^enum RET_CODE { OK = 0, NOTHING = 1, IOERR = -1, CLOSED = -2, BUFFER_FULL = -3, BUFFER_EMPTY = -4, TRY_AGAIN };$/;"	g
+TRY_AGAIN	fdwrapper.h	/^enum RET_CODE { OK = 0, NOTHING = 1, IOERR = -1, CLOSED = -2, BUFFER_FULL = -3, BUFFER_EMPTY = -4, TRY_AGAIN };$/;"	e	enum:RET_CODE
+USER_PER_PROCESS	processpool.h	/^    static const int USER_PER_PROCESS = 65536;      \/\/每个子进程最多能处理的事件数$/;"	m	class:processpool
+WRITE	fdwrapper.h	/^enum OP_TYPE { READ = 0, WRITE, ERROR };$/;"	e	enum:OP_TYPE
+_CONN_H_	conn.h	2;"	d
+_FDWRAPPER_H_	fdwrapper.h	2;"	d
+_LOG_H_	log.h	2;"	d
+_MGR_H_	mgr.h	2;"	d
+_PROCESSPOOL_H_	processpool.h	2;"	d
+add_read_fd	fdwrapper.cpp	/^void add_read_fd( int epollfd, int fd )$/;"	f
+add_write_fd	fdwrapper.cpp	/^void add_write_fd( int epollfd, int fd )$/;"	f
+addsig	processpool.h	/^static void addsig( int sig, void (handler)(int), bool restart = true )$/;"	f
+closefd	fdwrapper.cpp	/^void closefd( int epollfd, int fd )$/;"	f
+conn	conn.cpp	/^conn::conn()$/;"	f	class:conn
+conn	conn.h	/^class conn$/;"	c
+conn2srv	mgr.cpp	/^int mgr::conn2srv( const sockaddr_in& address )$/;"	f	class:mgr
+cteate	processpool.h	/^    static processpool< C, H, M >* cteate( int listenfd, int process_number = 8 )$/;"	f	class:processpool
+free_conn	mgr.cpp	/^mgr::free_conn( conn* connection )$/;"	f	class:mgr
+get_most_free_srv	processpool.h	/^int processpool< C, H, M >::get_most_free_srv()$/;"	f	class:processpool
+get_used_conn_cnt	mgr.cpp	/^mgr::get_used_conn_cnt()$/;"	f	class:mgr
+host	mgr.h	/^struct host$/;"	s
+init_ctl	conn.cpp	/^conn::init_ctl( int sockfd, const sockaddr_in& client_addr )$/;"	f	class:conn
+init_srv	conn.cpp	/^conn::init_srv( int sockfd, const sockaddr_in& server_addr )$/;"	f	class:conn
+level	log.cpp	/^static int level = LOG_INFO;$/;"	v	file:
+log	log.cpp	/^void log ( int log_level, const char* file_name, int line_num, const char* format, ... )$/;"	f
+loglevels	log.cpp	/^static const char* loglevels[] = $/;"	v	file:
+m_busy_ratio	processpool.h	/^    int m_busy_ratio;      \/\/给每台实际处理的服务器分配一个加权比例$/;"	m	class:process
+m_clt_address	conn.h	/^    sockaddr_in m_clt_address;$/;"	m	class:conn
+m_clt_buf	conn.h	/^    char *m_clt_buf;$/;"	m	class:conn
+m_clt_read_idx	conn.h	/^    int m_clt_read_idx;$/;"	m	class:conn
+m_clt_write_idx	conn.h	/^    int m_clt_write_idx;$/;"	m	class:conn
+m_cltfd	conn.h	/^    int m_cltfd;$/;"	m	class:conn
+m_conncnt	mgr.h	/^    int m_conncnt;$/;"	m	struct:host
+m_conns	mgr.h	/^    map< int, conn* > m_conns;      \/\/服务器端连接信息$/;"	m	class:mgr
+m_epollfd	mgr.cpp	/^int mgr::m_epollfd = -1;$/;"	m	class:mgr	file:
+m_epollfd	mgr.h	/^    static int m_epollfd;$/;"	m	class:mgr
+m_epollfd	processpool.h	/^    int m_epollfd;                                  \/\/当前进程的epoll内核事件表fd$/;"	m	class:processpool
+m_freed	mgr.h	/^    map< int, conn* > m_freed;$/;"	m	class:mgr
+m_hostname	mgr.h	/^    char m_hostname[1024];$/;"	m	struct:host
+m_idx	processpool.h	/^    int m_idx;                                      \/\/子进程在进程池中的序号$/;"	m	class:processpool
+m_instance	processpool.h	/^    static processpool< C, H, M >* m_instance;      \/\/进程池唯一实例$/;"	m	class:processpool
+m_instance	processpool.h	/^processpool< C, H, M>*processpool< C, H, M>::m_instance = NULL;$/;"	m	class:processpool
+m_listenfd	processpool.h	/^    int m_listenfd;                                 \/\/监听socket$/;"	m	class:processpool
+m_logic_srv	mgr.h	/^    host m_logic_srv;$/;"	m	class:mgr
+m_pid	processpool.h	/^    pid_t m_pid;            \/\/目标子进程的PID$/;"	m	class:process
+m_pipefd	processpool.h	/^    int m_pipefd[2];        \/\/父进程和子进程通:s用的管道$/;"	m	class:process
+m_port	mgr.h	/^    int m_port;$/;"	m	struct:host
+m_process_number	processpool.h	/^    int m_process_number;                           \/\/进程池中的进程总数$/;"	m	class:processpool
+m_srv_address	conn.h	/^    sockaddr_in m_srv_address;$/;"	m	class:conn
+m_srv_buf	conn.h	/^    char *m_srv_buf;$/;"	m	class:conn
+m_srv_closed	conn.h	/^    bool m_srv_closed;$/;"	m	class:conn
+m_srv_read_idx	conn.h	/^    int m_srv_read_idx;$/;"	m	class:conn
+m_srv_write_idx	conn.h	/^    int m_srv_write_idx;$/;"	m	class:conn
+m_srvfd	conn.h	/^    int m_srvfd;$/;"	m	class:conn
+m_stop	processpool.h	/^    int m_stop;                                     \/\/子进程通过此选项来决定是否停止运行$/;"	m	class:processpool
+m_sub_process	processpool.h	/^    process* m_sub_process;                         \/\/存储子进程的描述信息$/;"	m	class:processpool
+m_used	mgr.h	/^    map< int, conn* > m_used;$/;"	m	class:mgr
+mgr	mgr.cpp	/^mgr::mgr( int epollfd, const host& srv ) : m_logic_srv( srv )$/;"	f	class:mgr
+mgr	mgr.h	/^class mgr$/;"	c
+modfd	fdwrapper.cpp	/^void modfd( int epollfd, int fd, int ev )$/;"	f
+notify_parent_busy_ratio	processpool.h	/^void processpool<C, H, M>::notify_parent_busy_ratio( int pipefd, M* manager )$/;"	f	class:processpool
+pick_conn	mgr.cpp	/^mgr::pick_conn( int cltfd )$/;"	f	class:mgr
+process	mgr.cpp	/^mgr::process( int fd, OP_TYPE OP )$/;"	f	class:mgr
+process	processpool.h	/^    process() : m_pid( -1 ) {}$/;"	f	class:process
+process	processpool.h	/^class process$/;"	c
+processpool	processpool.h	/^class processpool$/;"	c
+processpool	processpool.h	/^processpool< C, H, M>::processpool( int listenfd, int process_number ) $/;"	f	class:processpool
+read_from_clt	conn.cpp	/^conn::read_from_clt()$/;"	f	class:conn
+read_from_srv	conn.cpp	/^conn::read_from_srv()$/;"	f	class:conn
+recycle_conns	mgr.cpp	/^void mgr::recycle_conns()$/;"	f	class:mgr
+removefd	fdwrapper.cpp	/^void removefd( int epollfd, int fd )$/;"	f
+reset	conn.cpp	/^conn::reset()$/;"	f	class:conn
+run	processpool.h	/^void processpool<C, H, M>::run(const vector<H>& arg)$/;"	f	class:processpool
+run_child	processpool.h	/^void processpool< C, H, M>::run_child( const vector<H>& arg )$/;"	f	class:processpool
+setNonBlocking	fdwrapper.cpp	/^int setNonBlocking( int fd )$/;"	f
+set_loglevel	log.cpp	/^void set_loglevel( int log_level )$/;"	f
+setup_sig_pipe	processpool.h	/^void processpool<C, H, M>::setup_sig_pipe()$/;"	f	class:processpool
+sig_handler	processpool.h	/^static void sig_handler( int sig )$/;"	f
+sig_pipefd	processpool.h	/^static int sig_pipefd[2];$/;"	v
+write_to_clt	conn.cpp	/^conn::write_to_clt()$/;"	f	class:conn
+write_to_srv	conn.cpp	/^conn::write_to_srv()$/;"	f	class:conn
+~conn	conn.cpp	/^conn::~conn()$/;"	f	class:conn
+~mgr	mgr.cpp	/^mgr::~mgr()$/;"	f	class:mgr
+~processpool	processpool.h	/^    ~processpool()$/;"	f	class:processpool
