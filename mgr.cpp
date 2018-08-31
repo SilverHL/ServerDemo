@@ -47,7 +47,7 @@ mgr::mgr( int epollfd, const host& srv ) : m_logic_srv( srv )
         }
         else 
         {
-            log (LOG_INFO, __FILE__, __LINE__, "build connection %d to server sunncess", i);
+            log (LOG_INFO, __FILE__, __LINE__, "build connection %d to server success", i);
             conn* tmp = NULL;
             try 
             {

@@ -43,7 +43,7 @@ private:
 
 public:
     //单例模式
-    static processpool< C, H, M >* cteate( int listenfd, int process_number = 8 )
+    static processpool< C, H, M >* create( int listenfd, int process_number = 8 )
     {
         if ( !m_instance )
         {
@@ -203,7 +203,7 @@ void processpool<C, H, M>::run(const vector<H>& arg)
 template <typename C, typename H, typename M>
 void processpool<C, H, M>::notify_parent_busy_ratio( int pipefd, M* manager )
 {
-    int msg = manager->get_used_conn_cnt;
+    int msg = manager->get_used_conn_cnt();
     send( pipefd, (char*)&msg, 1, 0 );
 }
 
@@ -219,7 +219,7 @@ void processpool< C, H, M>::run_child( const vector<H>& arg )
     epoll_event events[MAX_EVENT_NUMBER];
     
     //新建一个mgr对conn的管理类
-    M* manage = new M( m_epollfd, events, MAX_EVENT_NUMBER, EPOLL_WAIT_TIME );
+    M* manage = new M( m_epollfd, arg[m_idx]);
     assert(manage);
 
     int number = 0;
@@ -281,7 +281,7 @@ void processpool< C, H, M>::run_child( const vector<H>& arg )
                         continue;
                     }
                     //并为这个fd初始化一个连接
-                    conn->init_clt( connfd, client_addr );
+                    conn->init_ctl( connfd, client_addr );
                     notify_parent_busy_ratio(pipefd_read, manage);
                 }
             }
