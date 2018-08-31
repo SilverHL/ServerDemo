@@ -28,13 +28,8 @@ static void usage( const char* prog )
 {
     log( LOG_INFO, __FILE__, __LINE__,  "usage: %s [-h] [-v] [-f config_file]", prog );				
 }
-//ANSI C标准中几个标准预定义宏
-// __FILE__ :在源文件中插入当前原文件名
-// __LINE__ ：在源文件中插入当前源代码行号
-// _DATE_: 在源文件插入当前的编译日期
-// _TIME_: 在源文件中插入的编译时间
-// _STDC_ : 当要求程序严格遵循ANSI C 标准时刻标示被赋值为1
-// _cplusplus: 当编写C++程序时该标识符被定义
+
+
 int main( int argc, char* argv[] )
 {
     char cfg_file[1024];						//配置文件
@@ -216,11 +211,8 @@ int main( int argc, char* argv[] )
     ret = listen( listenfd, 5 );
     assert( ret != -1 );
 
-    //memset( cfg_host.m_hostname, '\0', 1024 );
-    //memcpy( cfg_host.m_hostname, "127.0.0.1", strlen( "127.0.0.1" ) );
-    //cfg_host.m_port = 54321;
-    //cfg_host.m_conncnt = 5;
-    processpool< conn, host, mgr >* pool = processpool< conn, host, mgr >::create( listenfd, logical_srv.size() );
+    processpool< conn, host, mgr >* pool = 
+        processpool< conn, host, mgr >::create( listenfd, logical_srv.size() );
     if( pool )
     {
         pool->run( logical_srv );
