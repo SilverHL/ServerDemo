@@ -108,7 +108,7 @@ static void addsig( int sig, void (handler)(int), bool restart = true )
     {
         sa.sa_flags |= SA_RESTART;  //重新调用被该信号终止的系统调用 给信号加一个重启的flag
     }
-    sigfillset( &sa.sa_mask );  //将sa的掩码设置为空
+    sigfillset( &sa.sa_mask );  //将sa的掩码置满
     assert( sigaction( sig, &sa, NULL ) != -1 ); 
 }
 

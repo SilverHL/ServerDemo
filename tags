@@ -75,7 +75,7 @@ m_srvfd	conn.h	/^    int m_srvfd;$/;"	m	class:conn
 m_stop	processpool.h	/^    int m_stop;                                     \/\/子进程通过此选项来决定是否停止运行$/;"	m	class:processpool
 m_sub_process	processpool.h	/^    process* m_sub_process;                         \/\/存储子进程的描述信息$/;"	m	class:processpool
 m_used	mgr.h	/^    map< int, conn* > m_used;$/;"	m	class:mgr
-main	main.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	main.cpp	/^int main( int argc, char* argv[] )$/;"	f
 mgr	mgr.cpp	/^mgr::mgr( int epollfd, const host& srv ) : m_logic_srv( srv )$/;"	f	class:mgr
 mgr	mgr.h	/^class mgr$/;"	c
 modfd	fdwrapper.cpp	/^void modfd( int epollfd, int fd, int ev )$/;"	f
@@ -99,7 +99,7 @@ set_loglevel	log.cpp	/^void set_loglevel( int log_level )$/;"	f
 setup_sig_pipe	processpool.h	/^void processpool<C, H, M>::setup_sig_pipe()$/;"	f	class:processpool
 sig_handler	processpool.h	/^static void sig_handler( int sig )$/;"	f
 sig_pipefd	processpool.h	/^static int sig_pipefd[2];$/;"	v
-usage	main.cpp	/^static void usage(const char *prog)$/;"	f	file:
+usage	main.cpp	/^static void usage( const char* prog )$/;"	f	file:
 version	main.cpp	/^static const char* version = "1.0";$/;"	v	file:
 write_to_clt	conn.cpp	/^conn::write_to_clt()$/;"	f	class:conn
 write_to_srv	conn.cpp	/^conn::write_to_srv()$/;"	f	class:conn
